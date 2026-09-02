@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sinooz - Search</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main class="search-page">
+
+        <div class="listing-bar">
+            <div class="filter-wrapper">
+                <button class="filter-btn" id="filter-btn">Filter <span class="chevron">&#9662;</span></button>
+                <div class="filter-panel" id="filter-panel">
+                    <div class="filter-section">
+                        <p class="filter-section-title">Category</p>
+                        <div id="filter-categories"></div>
+                    </div>
+                    <div class="filter-section">
+                        <p class="filter-section-title">Price</p>
+                        <label class="filter-option"><input type="radio" name="price-range" value="all" checked> All</label>
+                        <label class="filter-option"><input type="radio" name="price-range" value="0-100"> Under $100</label>
+                        <label class="filter-option"><input type="radio" name="price-range" value="100-300"> $100 - $300</label>
+                        <label class="filter-option"><input type="radio" name="price-range" value="300-600"> $300 - $600</label>
+                        <label class="filter-option"><input type="radio" name="price-range" value="600-99999"> $600+</label>
+                    </div>
+                    <button class="filter-clear" id="filter-clear">Clear Filters</button>
+                </div>
+            </div>
+
+            <p class="product-count" id="product-count"></p>
+
+            <div class="sort-wrapper">
+                <button class="sort-btn" id="sort-btn">Sort By: <span id="sort-label">Default</span> <span class="chevron">&#9662;</span></button>
+                <div class="sort-dropdown" id="sort-dropdown">
+                    <button class="sort-option" data-sort="default">Default</button>
+                    <button class="sort-option" data-sort="best-selling">Best Selling</button>
+                    <button class="sort-option" data-sort="newest">Newest - Oldest</button>
+                    <button class="sort-option" data-sort="price-low">Price (Low - High)</button>
+                    <button class="sort-option" data-sort="price-high">Price (High - Low)</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="search-heading">Products</h2>
+        <div class="search-results" id="search-results"></div>
+        <p class="search-empty" id="search-empty" style="display:none;">No products found.</p>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="products-data.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="search.js"></script>
+
+</body>
+
+</html>
