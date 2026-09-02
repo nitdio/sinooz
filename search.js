@@ -87,7 +87,7 @@ function renderResults() {
 
     emptyMsg.style.display = "none";
     container.innerHTML = results.map(p => `
-        <a href="product.html?id=${encodeURIComponent(p.id)}" class="result-card">
+        <a href="product?id=${encodeURIComponent(p.id)}" class="result-card">
             <div class="result-image"></div>
             <p class="result-name">${p.name}</p>
             <p class="result-price">$${p.price}</p>
