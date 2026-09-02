@@ -7,8 +7,8 @@ function loadProduct() {
     document.title = "Sinooz - " + product.name;
 
     document.getElementById("breadcrumb").innerHTML =
-        `<a href="home">Home</a> <span>&gt;</span> ` +
-        `<a href="search?category=${encodeURIComponent(product.category)}">${product.category}</a> ` +
+        `<a href="home.html">Home</a> <span>&gt;</span> ` +
+        `<a href="search.html?category=${encodeURIComponent(product.category)}">${product.category}</a> ` +
         `<span>&gt;</span> <span>${product.name}</span>`;
 
     document.getElementById("product-title").textContent = product.name;
@@ -86,3 +86,4 @@ document.querySelectorAll(".accordion-header").forEach(header => {
         }
     });
 });
+
