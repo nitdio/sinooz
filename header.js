@@ -1,4 +1,4 @@
-fetch("header.html")
+fetch("/header.html")
     .then(response => response.text())
     .then(data => {
         document.getElementById("header").innerHTML = data;
@@ -9,7 +9,7 @@ fetch("header.html")
         if (searchInput) {
             searchInput.addEventListener("keydown", function (e) {
                 if (e.key === "Enter" && searchInput.value.trim() !== "") {
-                    window.location.href = "search.html?q=" + encodeURIComponent(searchInput.value.trim());
+                    window.location.href = "/search?q=" + encodeURIComponent(searchInput.value.trim());
                 }
             });
         }
@@ -36,7 +36,7 @@ fetch("header.html")
                 }
 
                 suggestionsBox.innerHTML = matches.map(p => `
-                    <a href="product.html?id=${encodeURIComponent(p.id)}" class="suggestion-item">
+                    <a href="/product?id=${encodeURIComponent(p.id)}" class="suggestion-item">
                         <div class="suggestion-image"></div>
                         <div class="suggestion-text">
                             <p class="suggestion-name">${p.name}</p>
